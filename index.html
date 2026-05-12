@@ -19,16 +19,21 @@
       <a href="#" class="logo">
         <i class="fas fa-sparkles"></i> Sparkle<span>Clean</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-flag">🇬🇧</span> <span id="langLabel">EN</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#servis">Servis</a></li>
-        <li><a href="#kenapa-kami">Kenapa Kami</a></li>
-        <li><a href="#pakej">Pakej</a></li>
-        <li><a href="#testimoni">Testimoni</a></li>
-        <li><a href="#tempahan" class="nav-cta">Tempah Sekarang</a></li>
+        <li><a href="#beranda" data-i18n="nav_home">Beranda</a></li>
+        <li><a href="#servis" data-i18n="nav_services">Servis</a></li>
+        <li><a href="#kenapa-kami" data-i18n="nav_why">Kenapa Kami</a></li>
+        <li><a href="#pakej" data-i18n="nav_pricing">Pakej</a></li>
+        <li><a href="#testimoni" data-i18n="nav_testimonials">Testimoni</a></li>
+        <li><a href="#tempahan" class="nav-cta" data-i18n="nav_book">Tempah Sekarang</a></li>
       </ul>
     </div>
   </nav>
@@ -43,30 +48,30 @@
     <div class="container hero-content">
       <div class="hero-text">
         <div class="hero-badge">
-          <i class="fas fa-star"></i> #1 Servis Pembersihan Dipercayai
+          <i class="fas fa-star"></i> <span data-i18n="hero_badge">#1 Servis Pembersihan Dipercayai</span>
         </div>
-        <h1>Rumah Bersih,<br><span class="gradient-text">Hidup Tenang.</span></h1>
-        <p class="hero-desc">Kami menyediakan servis pembersihan profesional untuk rumah, pejabat dan premis komersial. Biarkan kami uruskan kebersihan, anda fokus pada yang penting.</p>
+        <h1 data-i18n-html="hero_title">Rumah Bersih,<br><span class="gradient-text">Hidup Tenang.</span></h1>
+        <p class="hero-desc" data-i18n="hero_desc">Kami menyediakan servis pembersihan profesional untuk rumah, pejabat dan premis komersial. Biarkan kami uruskan kebersihan, anda fokus pada yang penting.</p>
         <div class="hero-buttons">
           <a href="#pakej" class="btn btn-primary btn-lg">
-            <i class="fas fa-broom"></i> Lihat Pakej Kami
+            <i class="fas fa-broom"></i> <span data-i18n="hero_btn_packages">Lihat Pakej Kami</span>
           </a>
           <a href="https://wa.me/601169887631?text=Saya%20berminat%20dengan%20servis%20pembersihan" class="btn btn-outline btn-lg" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp Kami
+            <i class="fab fa-whatsapp"></i> <span data-i18n="hero_btn_whatsapp">WhatsApp Kami</span>
           </a>
         </div>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-num" data-target="5000">0</span>+
-            <span class="stat-label">Pelanggan Gembira</span>
+            <span class="stat-label" data-i18n="stat_customers">Pelanggan Gembira</span>
           </div>
           <div class="stat">
             <span class="stat-num" data-target="10">0</span>+
-            <span class="stat-label">Tahun Pengalaman</span>
+            <span class="stat-label" data-i18n="stat_years">Tahun Pengalaman</span>
           </div>
           <div class="stat">
             <span class="stat-num" data-target="100">0</span>%
-            <span class="stat-label">Kepuasan Dijamin</span>
+            <span class="stat-label" data-i18n="stat_satisfaction">Kepuasan Dijamin</span>
           </div>
         </div>
       </div>
@@ -76,11 +81,11 @@
           <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=600&fit=crop&q=80" alt="Servis pembersihan profesional" class="hero-photo">
           <div class="floating-card card-1">
             <i class="fas fa-shield-halved"></i>
-            <span>100% Dijamin</span>
+            <span data-i18n="float_guaranteed">100% Dijamin</span>
           </div>
           <div class="floating-card card-2">
             <i class="fas fa-clock"></i>
-            <span>Tepat Waktu</span>
+            <span data-i18n="float_punctual">Tepat Waktu</span>
           </div>
           <div class="floating-card card-3">
             <i class="fas fa-leaf"></i>
@@ -100,24 +105,22 @@
   <section class="services" id="servis">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Servis Kami</span>
-        <h2>Solusi Pembersihan <span class="gradient-text">Lengkap</span></h2>
-        <p>Kami menawarkan pelbagai servis pembersihan untuk memenuhi setiap keperluan anda</p>
+        <span class="section-tag" data-i18n="svc_tag">Servis Kami</span>
+        <h2 data-i18n-html="svc_title">Solusi Pembersihan <span class="gradient-text">Lengkap</span></h2>
+        <p data-i18n="svc_desc">Kami menawarkan pelbagai servis pembersihan untuk memenuhi setiap keperluan anda</p>
       </div>
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up">
           <div class="service-img">
             <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=400&h=220&fit=crop&q=80" alt="Pembersihan Rumah">
           </div>
-          <div class="service-icon">
-            <i class="fas fa-house-chimney"></i>
-          </div>
-          <h3>Pembersihan Rumah</h3>
-          <p>Pembersihan menyeluruh untuk setiap sudut rumah anda — dapur, bilik tidur, bilik mandi dan ruang tamu.</p>
+          <div class="service-icon"><i class="fas fa-house-chimney"></i></div>
+          <h3 data-i18n="svc1_title">Pembersihan Rumah</h3>
+          <p data-i18n="svc1_desc">Pembersihan menyeluruh untuk setiap sudut rumah anda — dapur, bilik tidur, bilik mandi dan ruang tamu.</p>
           <ul class="service-list">
-            <li><i class="fas fa-check"></i> Sapu & mop lantai</li>
-            <li><i class="fas fa-check"></i> Cuci bilik mandi</li>
-            <li><i class="fas fa-check"></i> Lap habuk & kemas</li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc1_f1">Sapu & mop lantai</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc1_f2">Cuci bilik mandi</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc1_f3">Lap habuk & kemas</span></li>
           </ul>
         </div>
         <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
@@ -125,75 +128,65 @@
           <div class="service-img">
             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=220&fit=crop&q=80" alt="Pembersihan Pejabat">
           </div>
-          <div class="service-icon">
-            <i class="fas fa-building"></i>
-          </div>
-          <h3>Pembersihan Pejabat</h3>
-          <p>Persekitaran kerja yang bersih meningkatkan produktiviti. Kami jaga kebersihan pejabat anda.</p>
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <h3 data-i18n="svc2_title">Pembersihan Pejabat</h3>
+          <p data-i18n="svc2_desc">Persekitaran kerja yang bersih meningkatkan produktiviti. Kami jaga kebersihan pejabat anda.</p>
           <ul class="service-list">
-            <li><i class="fas fa-check"></i> Pembersihan harian/mingguan</li>
-            <li><i class="fas fa-check"></i> Sanitasi permukaan</li>
-            <li><i class="fas fa-check"></i> Pengurusan sampah</li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc2_f1">Pembersihan harian/mingguan</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc2_f2">Sanitasi permukaan</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc2_f3">Pengurusan sampah</span></li>
           </ul>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
           <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=220&fit=crop&q=80" alt="Cuci Sofa & Karpet">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=220&fit=crop&q=80" alt="Cuci Sofa & Karpet">
           </div>
-          <div class="service-icon">
-            <i class="fas fa-couch"></i>
-          </div>
-          <h3>Cuci Sofa & Karpet</h3>
-          <p>Deep cleaning untuk sofa, karpet dan perabot lembut anda menggunakan peralatan profesional.</p>
+          <div class="service-icon"><i class="fas fa-couch"></i></div>
+          <h3 data-i18n="svc3_title">Cuci Sofa & Karpet</h3>
+          <p data-i18n="svc3_desc">Deep cleaning untuk sofa, karpet dan perabot lembut anda menggunakan peralatan profesional.</p>
           <ul class="service-list">
-            <li><i class="fas fa-check"></i> Deep extraction cleaning</li>
-            <li><i class="fas fa-check"></i> Nyahkan kotoran degil</li>
-            <li><i class="fas fa-check"></i> Wangian segar</li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc3_f1">Deep extraction cleaning</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc3_f2">Nyahkan kotoran degil</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc3_f3">Wangian segar</span></li>
           </ul>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
           <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1631545806609-03472e645b28?w=400&h=220&fit=crop&q=80" alt="Servis Aircond">
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=220&fit=crop&q=80" alt="Servis Aircond">
           </div>
-          <div class="service-icon">
-            <i class="fas fa-wind"></i>
-          </div>
-          <h3>Servis Aircond</h3>
-          <p>Cuci aircond untuk udara lebih segar dan penjimatan elektrik yang lebih baik.</p>
+          <div class="service-icon"><i class="fas fa-wind"></i></div>
+          <h3 data-i18n="svc4_title">Servis Aircond</h3>
+          <p data-i18n="svc4_desc">Cuci aircond untuk udara lebih segar dan penjimatan elektrik yang lebih baik.</p>
           <ul class="service-list">
-            <li><i class="fas fa-check"></i> Chemical wash</li>
-            <li><i class="fas fa-check"></i> Overhaul service</li>
-            <li><i class="fas fa-check"></i> Gas top-up</li>
+            <li><i class="fas fa-check"></i> <span>Chemical wash</span></li>
+            <li><i class="fas fa-check"></i> <span>Overhaul service</span></li>
+            <li><i class="fas fa-check"></i> <span>Gas top-up</span></li>
           </ul>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="400">
           <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1527515637462-cff94eebd21f?w=400&h=220&fit=crop&q=80" alt="Post-Renovation Cleaning">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=220&fit=crop&q=80" alt="Post-Renovation Cleaning">
           </div>
-          <div class="service-icon">
-            <i class="fas fa-broom"></i>
-          </div>
+          <div class="service-icon"><i class="fas fa-broom"></i></div>
           <h3>Post-Renovation</h3>
-          <p>Pembersihan selepas renovasi — buang habuk, simen dan sisa pembinaan dengan teliti.</p>
+          <p data-i18n="svc5_desc">Pembersihan selepas renovasi — buang habuk, simen dan sisa pembinaan dengan teliti.</p>
           <ul class="service-list">
-            <li><i class="fas fa-check"></i> Buang sisa binaan</li>
-            <li><i class="fas fa-check"></i> Polish lantai</li>
-            <li><i class="fas fa-check"></i> Cuci tingkap & frame</li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc5_f1">Buang sisa binaan</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc5_f2">Polish lantai</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc5_f3">Cuci tingkap & frame</span></li>
           </ul>
         </div>
         <div class="service-card" data-aos="fade-up" data-aos-delay="500">
           <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1632935190820-1db5e5ae3783?w=400&h=220&fit=crop&q=80" alt="Kawalan Serangga">
+            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=220&fit=crop&q=80" alt="Kawalan Serangga">
           </div>
-          <div class="service-icon">
-            <i class="fas fa-mosquito"></i>
-          </div>
-          <h3>Kawalan Serangga</h3>
-          <p>Rawatan pest control untuk menghalau nyamuk, semut, lipas dan anai-anai dari rumah anda.</p>
+          <div class="service-icon"><i class="fas fa-mosquito"></i></div>
+          <h3 data-i18n="svc6_title">Kawalan Serangga</h3>
+          <p data-i18n="svc6_desc">Rawatan pest control untuk menghalau nyamuk, semut, lipas dan anai-anai dari rumah anda.</p>
           <ul class="service-list">
-            <li><i class="fas fa-check"></i> Fogging & spraying</li>
-            <li><i class="fas fa-check"></i> Rawatan anai-anai</li>
-            <li><i class="fas fa-check"></i> Pencegahan serangga</li>
+            <li><i class="fas fa-check"></i> <span>Fogging & spraying</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc6_f2">Rawatan anai-anai</span></li>
+            <li><i class="fas fa-check"></i> <span data-i18n="svc6_f3">Pencegahan serangga</span></li>
           </ul>
         </div>
       </div>
@@ -205,36 +198,36 @@
     <div class="container">
       <div class="why-us-grid">
         <div class="why-us-content">
-          <span class="section-tag">Kenapa Pilih Kami</span>
-          <h2>Kami Bukan Sekadar <span class="gradient-text">Membersih</span></h2>
-          <p class="why-us-desc">Kami memberikan pengalaman pembersihan yang luar biasa dengan standard tertinggi. Setiap pekerja kami terlatih dan menggunakan produk berkualiti.</p>
+          <span class="section-tag" data-i18n="why_tag">Kenapa Pilih Kami</span>
+          <h2 data-i18n-html="why_title">Kami Bukan Sekadar <span class="gradient-text">Membersih</span></h2>
+          <p class="why-us-desc" data-i18n="why_desc">Kami memberikan pengalaman pembersihan yang luar biasa dengan standard tertinggi. Setiap pekerja kami terlatih dan menggunakan produk berkualiti.</p>
           <div class="features-list">
             <div class="feature-item">
               <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
               <div>
-                <h4>Pekerja Terlatih & Berdaftar</h4>
-                <p>Semua pekerja kami melalui latihan ketat dan pemeriksaan latar belakang.</p>
+                <h4 data-i18n="why_f1_title">Pekerja Terlatih & Berdaftar</h4>
+                <p data-i18n="why_f1_desc">Semua pekerja kami melalui latihan ketat dan pemeriksaan latar belakang.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon"><i class="fas fa-pump-soap"></i></div>
               <div>
-                <h4>Produk Mesra Alam</h4>
-                <p>Kami menggunakan produk pembersihan yang selamat untuk keluarga dan haiwan peliharaan.</p>
+                <h4 data-i18n="why_f2_title">Produk Mesra Alam</h4>
+                <p data-i18n="why_f2_desc">Kami menggunakan produk pembersihan yang selamat untuk keluarga dan haiwan peliharaan.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
               <div>
-                <h4>Harga Berpatutan</h4>
-                <p>Tiada caj tersembunyi. Harga telus dan kompetitif di pasaran.</p>
+                <h4 data-i18n="why_f3_title">Harga Berpatutan</h4>
+                <p data-i18n="why_f3_desc">Tiada caj tersembunyi. Harga telus dan kompetitif di pasaran.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon"><i class="fas fa-rotate"></i></div>
               <div>
-                <h4>Jaminan Kepuasan</h4>
-                <p>Tidak berpuas hati? Kami akan datang semula dan bersihkan tanpa caj tambahan.</p>
+                <h4 data-i18n="why_f4_title">Jaminan Kepuasan</h4>
+                <p data-i18n="why_f4_desc">Tidak berpuas hati? Kami akan datang semula dan bersihkan tanpa caj tambahan.</p>
               </div>
             </div>
           </div>
@@ -249,21 +242,21 @@
                 <i class="fas fa-trophy"></i>
                 <div>
                   <strong>15,000+</strong>
-                  <span>Projek Siap</span>
+                  <span data-i18n="vis_projects">Projek Siap</span>
                 </div>
               </div>
               <div class="visual-stat">
                 <i class="fas fa-users"></i>
                 <div>
                   <strong>50+</strong>
-                  <span>Pekerja Terlatih</span>
+                  <span data-i18n="vis_workers">Pekerja Terlatih</span>
                 </div>
               </div>
               <div class="visual-stat">
                 <i class="fas fa-star"></i>
                 <div>
                   <strong>4.9/5</strong>
-                  <span>Rating Purata</span>
+                  <span data-i18n="vis_rating">Rating Purata</span>
                 </div>
               </div>
             </div>
@@ -277,71 +270,71 @@
   <section class="pricing" id="pakej">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Pakej Harga</span>
-        <h2>Pilih Pakej <span class="gradient-text">Terbaik</span> Untuk Anda</h2>
-        <p>Pakej fleksibel yang sesuai untuk setiap bajet dan keperluan</p>
+        <span class="section-tag" data-i18n="price_tag">Pakej Harga</span>
+        <h2 data-i18n-html="price_title">Pilih Pakej <span class="gradient-text">Terbaik</span> Untuk Anda</h2>
+        <p data-i18n="price_desc">Pakej fleksibel yang sesuai untuk setiap bajet dan keperluan</p>
       </div>
       <div class="pricing-grid">
         <div class="pricing-card" data-aos="fade-up">
           <div class="pricing-header">
-            <h3>Asas</h3>
-            <p class="pricing-desc">Sesuai untuk pembersihan ringan</p>
+            <h3 data-i18n="pkg1_name">Asas</h3>
+            <p class="pricing-desc" data-i18n="pkg1_desc">Sesuai untuk pembersihan ringan</p>
           </div>
           <div class="pricing-price">
             <span class="currency">RM</span>
             <span class="amount">150</span>
-            <span class="period">/sesi</span>
+            <span class="period" data-i18n="per_session">/sesi</span>
           </div>
           <ul class="pricing-features">
-            <li><i class="fas fa-check-circle"></i> Sapu & mop semua lantai</li>
-            <li><i class="fas fa-check-circle"></i> Lap habuk perabot</li>
-            <li><i class="fas fa-check-circle"></i> Cuci bilik mandi (1)</li>
-            <li><i class="fas fa-check-circle"></i> Kemas dapur asas</li>
-            <li class="disabled"><i class="fas fa-times-circle"></i> Deep cleaning</li>
-            <li class="disabled"><i class="fas fa-times-circle"></i> Cuci tingkap</li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg1_f1">Sapu & mop semua lantai</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg1_f2">Lap habuk perabot</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg1_f3">Cuci bilik mandi (1)</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg1_f4">Kemas dapur asas</span></li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> <span>Deep cleaning</span></li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> <span data-i18n="pkg1_f6">Cuci tingkap</span></li>
           </ul>
-          <a href="#tempahan" class="btn btn-outline btn-block pakej-btn" data-pakej="Pembersihan Rumah" data-harga="Pakej Asas (RM150)">Pilih Pakej</a>
+          <a href="#tempahan" class="btn btn-outline btn-block pakej-btn" data-pakej="Pembersihan Rumah" data-harga="Pakej Asas (RM150)" data-i18n="btn_choose">Pilih Pakej</a>
         </div>
         <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="100">
-          <div class="popular-badge">Paling Popular</div>
+          <div class="popular-badge" data-i18n="most_popular">Paling Popular</div>
           <div class="pricing-header">
             <h3>Standard</h3>
-            <p class="pricing-desc">Pilihan terbaik untuk kebanyakan rumah</p>
+            <p class="pricing-desc" data-i18n="pkg2_desc">Pilihan terbaik untuk kebanyakan rumah</p>
           </div>
           <div class="pricing-price">
             <span class="currency">RM</span>
             <span class="amount">280</span>
-            <span class="period">/sesi</span>
+            <span class="period" data-i18n="per_session">/sesi</span>
           </div>
           <ul class="pricing-features">
-            <li><i class="fas fa-check-circle"></i> Semua dalam Pakej Asas</li>
-            <li><i class="fas fa-check-circle"></i> Deep cleaning dapur</li>
-            <li><i class="fas fa-check-circle"></i> Cuci semua bilik mandi</li>
-            <li><i class="fas fa-check-circle"></i> Cuci tingkap dalam</li>
-            <li><i class="fas fa-check-circle"></i> Vacuum karpet & sofa</li>
-            <li class="disabled"><i class="fas fa-times-circle"></i> Cuci aircond</li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg2_f1">Semua dalam Pakej Asas</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg2_f2">Deep cleaning dapur</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg2_f3">Cuci semua bilik mandi</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg2_f4">Cuci tingkap dalam</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg2_f5">Vacuum karpet & sofa</span></li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> <span data-i18n="pkg2_f6">Cuci aircond</span></li>
           </ul>
-          <a href="#tempahan" class="btn btn-primary btn-block pakej-btn" data-pakej="Pembersihan Rumah" data-harga="Pakej Standard (RM280)">Pilih Pakej</a>
+          <a href="#tempahan" class="btn btn-primary btn-block pakej-btn" data-pakej="Pembersihan Rumah" data-harga="Pakej Standard (RM280)" data-i18n="btn_choose">Pilih Pakej</a>
         </div>
         <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
           <div class="pricing-header">
             <h3>Premium</h3>
-            <p class="pricing-desc">Pembersihan menyeluruh sepenuhnya</p>
+            <p class="pricing-desc" data-i18n="pkg3_desc">Pembersihan menyeluruh sepenuhnya</p>
           </div>
           <div class="pricing-price">
             <span class="currency">RM</span>
             <span class="amount">450</span>
-            <span class="period">/sesi</span>
+            <span class="period" data-i18n="per_session">/sesi</span>
           </div>
           <ul class="pricing-features">
-            <li><i class="fas fa-check-circle"></i> Semua dalam Pakej Standard</li>
-            <li><i class="fas fa-check-circle"></i> Chemical wash aircond (2 unit)</li>
-            <li><i class="fas fa-check-circle"></i> Cuci tingkap luar</li>
-            <li><i class="fas fa-check-circle"></i> Deep clean sofa & karpet</li>
-            <li><i class="fas fa-check-circle"></i> Sanitasi keseluruhan</li>
-            <li><i class="fas fa-check-circle"></i> Jaminan 7 hari</li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg3_f1">Semua dalam Pakej Standard</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg3_f2">Chemical wash aircond (2 unit)</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg3_f3">Cuci tingkap luar</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg3_f4">Deep clean sofa & karpet</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg3_f5">Sanitasi keseluruhan</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-i18n="pkg3_f6">Jaminan 7 hari</span></li>
           </ul>
-          <a href="#tempahan" class="btn btn-outline btn-block pakej-btn" data-pakej="Pembersihan Rumah" data-harga="Pakej Premium (RM450)">Pilih Pakej</a>
+          <a href="#tempahan" class="btn btn-outline btn-block pakej-btn" data-pakej="Pembersihan Rumah" data-harga="Pakej Premium (RM450)" data-i18n="btn_choose">Pilih Pakej</a>
         </div>
       </div>
     </div>
@@ -351,21 +344,21 @@
   <section class="testimonials" id="testimoni">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Testimoni</span>
-        <h2>Apa Kata <span class="gradient-text">Pelanggan Kami</span></h2>
-        <p>Ribuan pelanggan berpuas hati dengan servis kami</p>
+        <span class="section-tag" data-i18n="test_tag">Testimoni</span>
+        <h2 data-i18n-html="test_title">Apa Kata <span class="gradient-text">Pelanggan Kami</span></h2>
+        <p data-i18n="test_desc">Ribuan pelanggan berpuas hati dengan servis kami</p>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card" data-aos="fade-up">
           <div class="testimonial-stars">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
-          <p class="testimonial-text">"Rumah saya macam baru selepas SparkleClean datang bersihkan. Memang sangat teliti dan profesional. Tak perlu risau lagi!"</p>
+          <p class="testimonial-text" data-i18n="test1_text">"Rumah saya macam baru selepas SparkleClean datang bersihkan. Memang sangat teliti dan profesional. Tak perlu risau lagi!"</p>
           <div class="testimonial-author">
             <div class="author-avatar"><i class="fas fa-user"></i></div>
             <div>
               <strong>Siti Aminah</strong>
-              <span>Ibu Rumah Tangga, Kuala Lumpur</span>
+              <span data-i18n="test1_role">Ibu Rumah Tangga, Kuala Lumpur</span>
             </div>
           </div>
         </div>
@@ -373,12 +366,12 @@
           <div class="testimonial-stars">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
-          <p class="testimonial-text">"Kami guna servis SparkleClean untuk pejabat setiap minggu. Pekerja mereka rajin, amanah dan sentiasa tepat masa. Highly recommended!"</p>
+          <p class="testimonial-text" data-i18n="test2_text">"Kami guna servis SparkleClean untuk pejabat setiap minggu. Pekerja mereka rajin, amanah dan sentiasa tepat masa. Highly recommended!"</p>
           <div class="testimonial-author">
             <div class="author-avatar"><i class="fas fa-user"></i></div>
             <div>
               <strong>Ahmad Razak</strong>
-              <span>Pengurus Pejabat, Petaling Jaya</span>
+              <span data-i18n="test2_role">Pengurus Pejabat, Petaling Jaya</span>
             </div>
           </div>
         </div>
@@ -386,12 +379,12 @@
           <div class="testimonial-stars">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
-          <p class="testimonial-text">"Lepas renovation rumah, habuk merata-rata. SparkleClean buat kerja post-reno cleaning yang sangat berkualiti. Memang berbaloi!"</p>
+          <p class="testimonial-text" data-i18n="test3_text">"Lepas renovation rumah, habuk merata-rata. SparkleClean buat kerja post-reno cleaning yang sangat berkualiti. Memang berbaloi!"</p>
           <div class="testimonial-author">
             <div class="author-avatar"><i class="fas fa-user"></i></div>
             <div>
               <strong>Nurul Huda</strong>
-              <span>Pemilik Rumah, Shah Alam</span>
+              <span data-i18n="test3_role">Pemilik Rumah, Shah Alam</span>
             </div>
           </div>
         </div>
@@ -403,76 +396,76 @@
   <section class="booking-section" id="tempahan">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Tempahan</span>
-        <h2>Buat <span class="gradient-text">Tempahan</span> Sekarang</h2>
-        <p>Isi borang di bawah dan kami akan hubungi anda dalam masa 30 minit</p>
+        <span class="section-tag" data-i18n="book_tag">Tempahan</span>
+        <h2 data-i18n-html="book_title">Buat <span class="gradient-text">Tempahan</span> Sekarang</h2>
+        <p data-i18n="book_desc">Isi borang di bawah dan kami akan hubungi anda dalam masa 30 minit</p>
       </div>
       <div class="booking-wrapper">
         <div class="booking-info">
-          <h3>Cara Tempahan</h3>
+          <h3 data-i18n="book_how">Cara Tempahan</h3>
           <div class="booking-steps">
             <div class="booking-step">
               <div class="step-number">1</div>
               <div>
-                <h4>Isi Borang</h4>
-                <p>Lengkapkan maklumat anda dan pilih servis yang dikehendaki.</p>
+                <h4 data-i18n="step1_title">Isi Borang</h4>
+                <p data-i18n="step1_desc">Lengkapkan maklumat anda dan pilih servis yang dikehendaki.</p>
               </div>
             </div>
             <div class="booking-step">
               <div class="step-number">2</div>
               <div>
-                <h4>Pengesahan</h4>
-                <p>Kami akan hubungi anda melalui WhatsApp untuk sahkan tempahan.</p>
+                <h4 data-i18n="step2_title">Pengesahan</h4>
+                <p data-i18n="step2_desc">Kami akan hubungi anda melalui WhatsApp untuk sahkan tempahan.</p>
               </div>
             </div>
             <div class="booking-step">
               <div class="step-number">3</div>
               <div>
-                <h4>Servis Dijalankan</h4>
-                <p>Pasukan kami akan tiba pada tarikh dan masa yang dijanjikan.</p>
+                <h4 data-i18n="step3_title">Servis Dijalankan</h4>
+                <p data-i18n="step3_desc">Pasukan kami akan tiba pada tarikh dan masa yang dijanjikan.</p>
               </div>
             </div>
           </div>
           <div class="booking-contact-info">
-            <p><i class="fab fa-whatsapp"></i> Atau terus WhatsApp: <a href="https://wa.me/601169887631" target="_blank">011-6988 7631</a></p>
+            <p><i class="fab fa-whatsapp"></i> <span data-i18n="book_or_wa">Atau terus WhatsApp:</span> <a href="https://wa.me/601169887631" target="_blank">011-6988 7631</a></p>
           </div>
         </div>
         <form class="booking-form" id="bookingForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="nama"><i class="fas fa-user"></i> Nama Penuh</label>
-              <input type="text" id="nama" name="nama" placeholder="Contoh: Ahmad bin Ali" required>
+              <label for="nama"><i class="fas fa-user"></i> <span data-i18n="form_name">Nama Penuh</span></label>
+              <input type="text" id="nama" name="nama" data-i18n-placeholder="form_name_ph" placeholder="Contoh: Ahmad bin Ali" required>
             </div>
             <div class="form-group">
-              <label for="telefon"><i class="fas fa-phone"></i> No. Telefon</label>
-              <input type="tel" id="telefon" name="telefon" placeholder="Contoh: 011-6988 7631" required>
+              <label for="telefon"><i class="fas fa-phone"></i> <span data-i18n="form_phone">No. Telefon</span></label>
+              <input type="tel" id="telefon" name="telefon" data-i18n-placeholder="form_phone_ph" placeholder="Contoh: 011-6988 7631" required>
             </div>
           </div>
           <div class="form-group">
-            <label for="email"><i class="fas fa-envelope"></i> Email (Pilihan)</label>
-            <input type="email" id="email" name="email" placeholder="Contoh: nama@email.com">
+            <label for="email"><i class="fas fa-envelope"></i> <span data-i18n="form_email">Email (Pilihan)</span></label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="form_email_ph" placeholder="Contoh: nama@email.com">
           </div>
           <div class="form-group">
-            <label for="servis"><i class="fas fa-broom"></i> Jenis Servis</label>
+            <label for="servis-pilihan"><i class="fas fa-broom"></i> <span data-i18n="form_service">Jenis Servis</span></label>
             <select id="servis-pilihan" name="servis" required>
-              <option value="" disabled selected>-- Pilih Servis --</option>
-              <option value="Pembersihan Rumah">Pembersihan Rumah</option>
-              <option value="Pembersihan Pejabat">Pembersihan Pejabat</option>
-              <option value="Cuci Sofa & Karpet">Cuci Sofa & Karpet</option>
-              <option value="Servis Aircond">Servis Aircond</option>
-              <option value="Post-Renovation">Post-Renovation Cleaning</option>
-              <option value="Kawalan Serangga">Kawalan Serangga</option>
+              <option value="" disabled selected data-i18n="form_service_ph">-- Pilih Servis --</option>
+              <option value="Pembersihan Rumah" data-i18n="opt_house">Pembersihan Rumah</option>
+              <option value="Pembersihan Pejabat" data-i18n="opt_office">Pembersihan Pejabat</option>
+              <option value="Cuci Sofa & Karpet" data-i18n="opt_sofa">Cuci Sofa & Karpet</option>
+              <option value="Servis Aircond" data-i18n="opt_aircond">Servis Aircond</option>
+              <option value="Post-Renovation" data-i18n="opt_postreno">Post-Renovation Cleaning</option>
+              <option value="Kawalan Serangga" data-i18n="opt_pest">Kawalan Serangga</option>
             </select>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="tarikh"><i class="fas fa-calendar"></i> Tarikh Pilihan</label>
+              <label for="tarikh"><i class="fas fa-calendar"></i> <span data-i18n="form_date">Tarikh Pilihan</span></label>
               <input type="date" id="tarikh" name="tarikh" required>
             </div>
             <div class="form-group">
-              <label for="masa"><i class="fas fa-clock"></i> Masa Pilihan</label>
+              <label for="masa"><i class="fas fa-clock"></i> <span data-i18n="form_time">Masa Pilihan</span></label>
               <select id="masa" name="masa" required>
-                <option value="" disabled selected>-- Pilih Masa --</option>
+                <option value="" disabled selected data-i18n="form_time_ph">-- Pilih Masa --</option>
                 <option value="8:00 AM">8:00 AM</option>
                 <option value="9:00 AM">9:00 AM</option>
                 <option value="10:00 AM">10:00 AM</option>
@@ -487,17 +480,17 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="alamat"><i class="fas fa-location-dot"></i> Alamat</label>
-            <textarea id="alamat" name="alamat" rows="3" placeholder="Alamat penuh untuk servis" required></textarea>
+            <label for="alamat"><i class="fas fa-location-dot"></i> <span data-i18n="form_address">Alamat</span></label>
+            <textarea id="alamat" name="alamat" rows="3" data-i18n-placeholder="form_address_ph" placeholder="Alamat penuh untuk servis" required></textarea>
           </div>
           <div class="form-group">
-            <label for="catatan"><i class="fas fa-message"></i> Catatan Tambahan</label>
-            <textarea id="catatan" name="catatan" rows="2" placeholder="Sebarang permintaan khas atau maklumat tambahan"></textarea>
+            <label for="catatan"><i class="fas fa-message"></i> <span data-i18n="form_notes">Catatan Tambahan</span></label>
+            <textarea id="catatan" name="catatan" rows="2" data-i18n-placeholder="form_notes_ph" placeholder="Sebarang permintaan khas atau maklumat tambahan"></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-lg btn-block">
-            <i class="fab fa-whatsapp"></i> Hantar Tempahan via WhatsApp
+            <i class="fab fa-whatsapp"></i> <span data-i18n="form_submit">Hantar Tempahan via WhatsApp</span>
           </button>
-          <p class="form-note"><i class="fas fa-lock"></i> Maklumat anda selamat dan tidak akan dikongsi.</p>
+          <p class="form-note"><i class="fas fa-lock"></i> <span data-i18n="form_safe">Maklumat anda selamat dan tidak akan dikongsi.</span></p>
         </form>
       </div>
     </div>
@@ -507,20 +500,20 @@
   <section class="cta-section" id="hubungi">
     <div class="container">
       <div class="cta-content">
-        <h2>Sedia Untuk Rumah <span class="gradient-text-light">Lebih Bersih?</span></h2>
-        <p>Hubungi kami sekarang untuk dapatkan sebut harga percuma. Tiada komitmen!</p>
+        <h2 data-i18n-html="cta_title">Sedia Untuk Rumah <span class="gradient-text-light">Lebih Bersih?</span></h2>
+        <p data-i18n="cta_desc">Hubungi kami sekarang untuk dapatkan sebut harga percuma. Tiada komitmen!</p>
         <div class="cta-buttons">
           <a href="https://wa.me/601169887631?text=Saya%20ingin%20dapatkan%20sebut%20harga%20untuk%20servis%20pembersihan" class="btn btn-white btn-lg" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp Sekarang
+            <i class="fab fa-whatsapp"></i> <span data-i18n="cta_wa">WhatsApp Sekarang</span>
           </a>
           <a href="tel:+601169887631" class="btn btn-outline-light btn-lg">
             <i class="fas fa-phone"></i> 011-6988 7631
           </a>
         </div>
         <div class="cta-trust">
-          <div class="trust-item"><i class="fas fa-check-circle"></i> Sebut harga percuma</div>
-          <div class="trust-item"><i class="fas fa-check-circle"></i> Tiada caj tersembunyi</div>
-          <div class="trust-item"><i class="fas fa-check-circle"></i> Respon dalam 30 minit</div>
+          <div class="trust-item"><i class="fas fa-check-circle"></i> <span data-i18n="trust1">Sebut harga percuma</span></div>
+          <div class="trust-item"><i class="fas fa-check-circle"></i> <span data-i18n="trust2">Tiada caj tersembunyi</span></div>
+          <div class="trust-item"><i class="fas fa-check-circle"></i> <span data-i18n="trust3">Respon dalam 30 minit</span></div>
         </div>
       </div>
     </div>
@@ -534,7 +527,7 @@
           <a href="#" class="logo footer-logo">
             <i class="fas fa-sparkles"></i> Sparkle<span>Clean</span>
           </a>
-          <p>Servis pembersihan profesional yang dipercayai oleh ribuan pelanggan di seluruh Malaysia.</p>
+          <p data-i18n="footer_about">Servis pembersihan profesional yang dipercayai oleh ribuan pelanggan di seluruh Malaysia.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -543,37 +536,37 @@
           </div>
         </div>
         <div class="footer-links">
-          <h4>Pautan Pantas</h4>
+          <h4 data-i18n="footer_quick">Pautan Pantas</h4>
           <ul>
-            <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#servis">Servis</a></li>
-            <li><a href="#pakej">Pakej Harga</a></li>
-            <li><a href="#testimoni">Testimoni</a></li>
-            <li><a href="#hubungi">Hubungi Kami</a></li>
+            <li><a href="#beranda" data-i18n="nav_home">Beranda</a></li>
+            <li><a href="#servis" data-i18n="nav_services">Servis</a></li>
+            <li><a href="#pakej" data-i18n="footer_pricing">Pakej Harga</a></li>
+            <li><a href="#testimoni" data-i18n="nav_testimonials">Testimoni</a></li>
+            <li><a href="#hubungi" data-i18n="footer_contact_link">Hubungi Kami</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Servis Kami</h4>
+          <h4 data-i18n="svc_tag">Servis Kami</h4>
           <ul>
-            <li><a href="#servis">Pembersihan Rumah</a></li>
-            <li><a href="#servis">Pembersihan Pejabat</a></li>
-            <li><a href="#servis">Cuci Sofa & Karpet</a></li>
-            <li><a href="#servis">Servis Aircond</a></li>
+            <li><a href="#servis" data-i18n="svc1_title">Pembersihan Rumah</a></li>
+            <li><a href="#servis" data-i18n="svc2_title">Pembersihan Pejabat</a></li>
+            <li><a href="#servis" data-i18n="svc3_title">Cuci Sofa & Karpet</a></li>
+            <li><a href="#servis" data-i18n="svc4_title">Servis Aircond</a></li>
             <li><a href="#servis">Post-Renovation</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4>Hubungi Kami</h4>
+          <h4 data-i18n="footer_contact_link">Hubungi Kami</h4>
           <ul>
             <li><i class="fas fa-phone"></i> 011-6988 7631</li>
             <li><i class="fas fa-envelope"></i> info@sparkleclean.my</li>
             <li><i class="fas fa-location-dot"></i> Kuala Lumpur, Malaysia</li>
-            <li><i class="fas fa-clock"></i> Isnin - Sabtu, 8am - 6pm</li>
+            <li><i class="fas fa-clock"></i> <span data-i18n="footer_hours">Isnin - Sabtu, 8am - 6pm</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 SparkleClean. Hak Cipta Terpelihara.</p>
+        <p data-i18n="footer_copy">&copy; 2024 SparkleClean. Hak Cipta Terpelihara.</p>
       </div>
     </div>
   </footer>
