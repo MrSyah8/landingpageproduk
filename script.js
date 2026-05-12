@@ -149,4 +149,51 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.addEventListener('scroll', updateActiveNav);
+
+  // ===== Booking Form — Send to WhatsApp =====
+  var bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    // Set minimum date to today
+    var tarikhInput = document.getElementById('tarikh');
+    if (tarikhInput) {
+      var today = new Date().toISOString().split('T')[0];
+      tarikhInput.setAttribute('min', today);
+    }
+
+    bookingForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var nama = document.getElementById('nama').value.trim();
+      var telefon = document.getElementById('telefon').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var servis = document.getElementById('servis-pilihan').value;
+      var tarikh = document.getElementById('tarikh').value;
+      var masa = document.getElementById('masa').value;
+      var alamat = document.getElementById('alamat').value.trim();
+      var catatan = document.getElementById('catatan').value.trim();
+
+      // Format date nicely
+      var tarikhFormatted = '';
+      if (tarikh) {
+        var d = new Date(tarikh);
+        var days = ['Ahad', 'Isnin', 'Selasa', 'Rabu', 'Khamis', 'Jumaat', 'Sabtu'];
+        var months = ['Jan', 'Feb', 'Mac', 'Apr', 'Mei', 'Jun', 'Jul', 'Ogos', 'Sep', 'Okt', 'Nov', 'Dis'];
+        tarikhFormatted = days[d.getDay()] + ', ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+      }
+
+      var message = '🧹 *TEMPAHAN BARU — SparkleClean*\n\n';
+      message += '👤 *Nama:* ' + nama + '\n';
+      message += '📱 *Telefon:* ' + telefon + '\n';
+      if (email) message += '📧 *Email:* ' + email + '\n';
+      message += '🧽 *Servis:* ' + servis + '\n';
+      message += '📅 *Tarikh:* ' + tarikhFormatted + '\n';
+      message += '🕐 *Masa:* ' + masa + '\n';
+      message += '📍 *Alamat:* ' + alamat + '\n';
+      if (catatan) message += '📝 *Catatan:* ' + catatan + '\n';
+      message += '\n_Dihantar melalui laman web SparkleClean_';
+
+      var waURL = 'https://wa.me/601169887631?text=' + encodeURIComponent(message);
+      window.open(waURL, '_blank');
+    });
+  }
 });
