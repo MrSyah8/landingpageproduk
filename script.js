@@ -1,10 +1,152 @@
-// Contoh: Tambahkan animasi fade-in apabila halaman dimuatkan
 document.addEventListener('DOMContentLoaded', function () {
-  const elements = document.querySelectorAll('.feature, .testimonial');
-  elements.forEach((element, index) => {
-    setTimeout(() => {
-      element.style.opacity = '1';
-      element.style.transform = 'translateY(0)';
-    }, index * 200); // Delay setiap elemen
+
+  // ===== Navbar Scroll Effect =====
+  const navbar = document.getElementById('navbar');
+  const backToTop = document.getElementById('backToTop');
+
+  function handleScroll() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+
+    if (window.scrollY > 500) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+
+  // ===== Mobile Nav Toggle =====
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  navToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
   });
+
+  document.querySelectorAll('.nav-links a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('active');
+      navToggle.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+      navLinks.classList.remove('active');
+      navToggle.classList.remove('active');
+    }
+  });
+
+  // ===== Back to Top =====
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== Counter Animation =====
+  function animateCounters() {
+    var counters = document.querySelectorAll('.stat-num');
+    counters.forEach(function (counter) {
+      var target = parseInt(counter.getAttribute('data-target'));
+      var current = 0;
+      var increment = target / 80;
+      var duration = 2000;
+      var stepTime = duration / 80;
+
+      function updateCounter() {
+        current += increment;
+        if (current < target) {
+          counter.textContent = Math.ceil(current).toLocaleString();
+          setTimeout(updateCounter, stepTime);
+        } else {
+          counter.textContent = target.toLocaleString();
+        }
+      }
+
+      updateCounter();
+    });
+  }
+
+  // ===== Scroll Reveal Animation =====
+  var animatedElements = document.querySelectorAll(
+    '.service-card, .pricing-card, .testimonial-card, .feature-item, .visual-card'
+  );
+
+  animatedElements.forEach(function (el) {
+    el.classList.add('fade-in');
+  });
+
+  var countersAnimated = false;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+  animatedElements.forEach(function (el) {
+    observer.observe(el);
+  });
+
+  // Counter observer
+  var statsSection = document.querySelector('.hero-stats');
+  if (statsSection) {
+    var counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !countersAnimated) {
+          countersAnimated = true;
+          animateCounters();
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counterObserver.observe(statsSection);
+  }
+
+  // ===== Smooth Scroll for Anchor Links =====
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      var targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ===== Active Nav Link on Scroll =====
+  var sections = document.querySelectorAll('section[id]');
+
+  function updateActiveNav() {
+    var scrollY = window.scrollY + 100;
+    sections.forEach(function (section) {
+      var sectionTop = section.offsetTop;
+      var sectionHeight = section.offsetHeight;
+      var sectionId = section.getAttribute('id');
+      var navLink = document.querySelector('.nav-links a[href="#' + sectionId + '"]');
+      if (navLink) {
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          navLink.style.opacity = '1';
+          navLink.style.fontWeight = '700';
+        } else {
+          navLink.style.opacity = '';
+          navLink.style.fontWeight = '';
+        }
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
 });
