@@ -150,6 +150,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', updateActiveNav);
 
+  // ===== Pakej Buttons — Scroll to Form & Pre-fill =====
+  document.querySelectorAll('.pakej-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var harga = this.getAttribute('data-harga');
+      var catatanField = document.getElementById('catatan');
+      if (catatanField && harga) {
+        catatanField.value = harga;
+      }
+      var formSection = document.getElementById('tempahan');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function () {
+          var namaField = document.getElementById('nama');
+          if (namaField) namaField.focus();
+        }, 800);
+      }
+    });
+  });
+
   // ===== Booking Form — Send to WhatsApp =====
   var bookingForm = document.getElementById('bookingForm');
   if (bookingForm) {
